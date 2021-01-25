@@ -1,8 +1,12 @@
-html, body {
+* {
+    box-sizing: content-box;
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 footer {
     width: 100%;
@@ -15,9 +19,27 @@ footer {
 nav {
     width: 100%;
     position: sticky;
+    display: flex;
     bottom:0;
     top: 0;
+    justify-content: space-between;
 }
+.content {
+    display: flex;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+    justify-content: space-around;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 75%;
+    justify-content: space-around;
+}
+
 .primary_color {
     background-color: yellowgreen;
 }
@@ -40,9 +62,6 @@ ul {
 li {
     float: left;
 }
-li:first-child{
-    background-color: greenyellow;
-}
 /* Link Styles */
 a:link, a:visited {
     display: block;
@@ -59,6 +78,17 @@ a:hover {
     color: white;
 }
 
+.page_name {
+    display: block;
+    width: 120px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    background-color: greenyellow
+}
 /* Row and Column Div class styles*/
 .row {
     display: flex;
